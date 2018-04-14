@@ -2,6 +2,7 @@ from brief import brief
 from fast import fast
 from harris_corner_detection import basic as hc
 from harris_corner_detection import subpixel as hsp
+from orb import orb
 from shi_tomasi import shi_tomasi as st
 
 choice_message = """
@@ -12,6 +13,7 @@ Which program should I run?
 3. Shi Tomasi
 4. FAST (Features from Accelerated Segment Test)
 5. BRIEF (Binary Robust Independent Elementary Features)
+6. ORB (Oriented FAST and Rotated BRIEF)
 """
 
 choice = int(input(choice_message))
@@ -30,3 +32,6 @@ if choice == 4:
 
 if choice == 5:
     brief.run()
+
+if choice == 6:
+    orb.run()
