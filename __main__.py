@@ -1,3 +1,4 @@
+from brief import brief
 from fast import fast
 from harris_corner_detection import basic as hc
 from harris_corner_detection import subpixel as hsp
@@ -10,6 +11,7 @@ Which program should I run?
 2. Harris Detection with Subpixel Accuracy
 3. Shi Tomasi
 4. FAST (Features from Accelerated Segment Test)
+5. BRIEF (Binary Robust Independent Elementary Features)
 """
 
 choice = int(input(choice_message))
@@ -25,3 +27,6 @@ if choice == 3:
 
 if choice == 4:
     fast.run()
+
+if choice == 5:
+    brief.run()
