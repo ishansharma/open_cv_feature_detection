@@ -1,4 +1,5 @@
 from brief import brief
+from camshift import camshift
 from fast import fast
 from harris_corner_detection import basic as hc
 from harris_corner_detection import subpixel as hsp
@@ -14,6 +15,8 @@ Which program should I run?
 4. FAST (Features from Accelerated Segment Test)
 5. BRIEF (Binary Robust Independent Elementary Features)
 6. ORB (Oriented FAST and Rotated BRIEF)
+7. Camshift
+8. Contour based detector
 """
 
 choice = int(input(choice_message))
@@ -35,3 +38,6 @@ if choice == 5:
 
 if choice == 6:
     orb.run()
+
+if choice == 7:
+    camshift.run()
