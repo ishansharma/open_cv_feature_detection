@@ -9,7 +9,7 @@ def run():
     ret, frame = cap.read()
 
     # hardcoding initial location
-    r, h, c, w = 400, 1200, 300, 475
+    r, h, c, w = 800, 800, 600, 475
     track_window = (c, r, w, h)
 
     # set up area for tracking
@@ -35,13 +35,13 @@ def run():
             pts = cv2.boxPoints(ret)
             pts = np.int0(pts)
             img2 = cv2.polylines(frame, [pts], True, 255, 2)
-            cv2.imshow('img2', img2)
+            cv2.imshow('img2', cv2.resize(img2, None, fx=0.3, fy=0.3, interpolation=cv2.INTER_CUBIC))
 
             k = cv2.waitKey(60) & 0xff
             if k == 27:
                 break
             else:
-                cv2.imwrite(chr(k) + ".jpg", img2)
+                cv2.imwrite("out/v/vid_" + chr(k) + ".jpg", img2)
 
         else:
             break
