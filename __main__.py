@@ -6,6 +6,7 @@ from harris_corner_detection import subpixel as hsp
 from image_operations import laplacian_derivative as lp
 from image_operations import transformations as tf
 from orb import convex_hull as ch
+from orb import dt
 from orb import orb
 from shi_tomasi import shi_tomasi as st
 
@@ -23,6 +24,7 @@ Which program should I run?
 9. Image resize 
 10. Laplacian Derivative
 11. Convex hull of points using ORB
+12. Delaunay Triangulation
 """
 
 choice = int(input(choice_message))
@@ -30,7 +32,7 @@ choice = int(input(choice_message))
 hand_from_dataset = "../../dataset/Hands/Hand_0000083.jpg"
 
 if choice == 1:
-    hc.run()
+    hc.run(hand_from_dataset)
 
 if choice == 2:
     hsp.run()
@@ -61,3 +63,6 @@ if choice == 10:
 
 if choice == 11:
     ch.run(hand_from_dataset)
+
+if choice == 12:
+    dt.run(hand_from_dataset)
