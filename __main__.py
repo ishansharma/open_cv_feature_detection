@@ -1,5 +1,6 @@
 from brief import brief
 from camshift import camshift
+from depth_detection import depth_detection as dd
 from fast import fast
 from hand_contours import detector as hc
 from harris_corner_detection import subpixel as hsp
@@ -25,6 +26,7 @@ Which program should I run?
 10. Laplacian Derivative
 11. Convex hull of points using ORB
 12. Delaunay Triangulation
+13. Depth Detection
 """
 
 choice = int(input(choice_message))
@@ -66,3 +68,6 @@ if choice == 11:
 
 if choice == 12:
     dt.run(hand_from_dataset)
+
+if choice == 13:
+    dd.run()
