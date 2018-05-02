@@ -38,7 +38,7 @@ if choice == 2:
     hsp.run()
 
 if choice == 3:
-    st.run()
+    st.run(hand_from_dataset)
 
 if choice == 4:
     fast.run()
